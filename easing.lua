@@ -16,7 +16,7 @@ local c5 = (2 * math.pi) / 4.5
 local n1 = 7.5625
 local d1 = 2.75
 
-ease = {
+easing = {
 
   ------- SINE -------
   ["in_sine"] = function(t)

@@ -7,89 +7,89 @@ function love.load()
 	dir = 1
 
 	states = {
-		[1] = ease.in_sine,
-		[2] = ease.out_sine,
-		[3] = ease.in_out_sine,
+		[1] = easing.in_sine,
+		[2] = easing.out_sine,
+		[3] = easing.in_out_sine,
 
-		[4] = ease.in_cubic,
-		[5] = ease.out_cubic,
-		[6] = ease.in_out_cubic,
+		[4] = easing.in_cubic,
+		[5] = easing.out_cubic,
+		[6] = easing.in_out_cubic,
 
-		[7] = ease.in_quint,
-		[8] = ease.out_quint,
-		[9] = ease.in_out_quint,
+		[7] = easing.in_quint,
+		[8] = easing.out_quint,
+		[9] = easing.in_out_quint,
 
-		[10] = ease.in_circ,
-		[11] = ease.out_circ,
-		[12] = ease.in_out_circ,
+		[10] = easing.in_circ,
+		[11] = easing.out_circ,
+		[12] = easing.in_out_circ,
 
-		[13] = ease.in_elastic,
-		[14] = ease.out_elastic,
-		[15] = ease.in_out_elastic,
+		[13] = easing.in_elastic,
+		[14] = easing.out_elastic,
+		[15] = easing.in_out_elastic,
 
-		[16] = ease.in_quad,
-		[17] = ease.out_quad,
-		[18] = ease.in_out_quad,
+		[16] = easing.in_quad,
+		[17] = easing.out_quad,
+		[18] = easing.in_out_quad,
 
-		[19] = ease.in_quart,
-		[20] = ease.out_quart,
-		[21] = ease.in_out_quart,
+		[19] = easing.in_quart,
+		[20] = easing.out_quart,
+		[21] = easing.in_out_quart,
 
-		[22] = ease.in_expo,
-		[23] = ease.out_expo,
-		[24] = ease.in_out_expo,
+		[22] = easing.in_expo,
+		[23] = easing.out_expo,
+		[24] = easing.in_out_expo,
 
-		[25] = ease.in_back,
-		[26] = ease.out_back,
-		[27] = ease.in_out_back,
+		[25] = easing.in_back,
+		[26] = easing.out_back,
+		[27] = easing.in_out_back,
 
-		[28] = ease.in_bounce,
-		[29] = ease.out_bounce,
-		[30] = ease.in_out_bounce
+		[28] = easing.in_bounce,
+		[29] = easing.out_bounce,
+		[30] = easing.in_out_bounce
 	}
 
 	states_info = {
-		[1] = "ease.in_sine",
-		[2] = "ease.out_sine",
-		[3] = "ease.in_out_sine",
+		[1] = "easing.in_sine",
+		[2] = "easing.out_sine",
+		[3] = "easing.in_out_sine",
 
-		[4] = "ease.in_cubic",
-		[5] = "ease.out_cubic",
-		[6] = "ease.in_out_cubic",
+		[4] = "easing.in_cubic",
+		[5] = "easing.out_cubic",
+		[6] = "easing.in_out_cubic",
 
-		[7] = "ease.in_quint",
-		[8] = "ease.out_quint",
-		[9] = "ease.in_out_quint",
+		[7] = "easing.in_quint",
+		[8] = "easing.out_quint",
+		[9] = "easing.in_out_quint",
 
-		[10] = "ease.in_circ",
-		[11] = "ease.out_circ",
-		[12] = "ease.in_out_circ",
+		[10] = "easing.in_circ",
+		[11] = "easing.out_circ",
+		[12] = "easing.in_out_circ",
 
-		[13] = "ease.in_elastic",
-		[14] = "ease.out_elastic",
-		[15] = "ease.in_out_elastic",
+		[13] = "easing.in_elastic",
+		[14] = "easing.out_elastic",
+		[15] = "easing.in_out_elastic",
 
-		[16] = "ease.in_quad",
-		[17] = "ease.out_quad",
-		[18] = "ease.in_out_quad",
+		[16] = "easing.in_quad",
+		[17] = "easing.out_quad",
+		[18] = "easing.in_out_quad",
 
-		[19] = "ease.in_quart",
-		[20] = "ease.out_quart",
-		[21] = "ease.in_out_quart",
+		[19] = "easing.in_quart",
+		[20] = "easing.out_quart",
+		[21] = "easing.in_out_quart",
 
-		[22] = "ease.in_expo",
-		[23] = "ease.out_expo",
-		[24] = "ease.in_out_expo",
+		[22] = "easing.in_expo",
+		[23] = "easing.out_expo",
+		[24] = "easing.in_out_expo",
 
-		[25] = "ease.in_back",
-		[26] = "ease.out_back",
-		[27] = "ease.in_out_back",
+		[25] = "easing.in_back",
+		[26] = "easing.out_back",
+		[27] = "easing.in_out_back",
 
-		[28] = "ease.in_bounce",
-		[29] = "ease.out_bounce",
-		[30] = "ease.in_out_bounce"
+		[28] = "easing.in_bounce",
+		[29] = "easing.out_bounce",
+		[30] = "easing.in_out_bounce"
 	}
-	ease_state = 1
+	easing_state = 1
 end
 
 function love.update()
@@ -109,9 +109,9 @@ end
 
 function love.keypressed(key, scancode, isrepeat)
    if key == "left" then
-   		ease_state = ease_state - 1
+   		easing_state = easing_state - 1
    elseif key == "right" then
-		ease_state = ease_state + 1
+		easing_state = easing_state + 1
    end
 
    if key == "space" then
@@ -121,14 +121,14 @@ end
 
 function love.draw()
 
-	ease_state = math.max(1, math.min(30, ease_state))
+	easing_state = math.max(1, math.min(30, easing_state))
 	
 	love.graphics.setColor(1, 1, 1, 1)
 	love.graphics.setBackgroundColor(0.1, 0.1, 0.3, a)
 	love.graphics.print("Times: "..times, 10, 15)
-	love.graphics.print("State: "..states_info[ease_state], 10, 32)
+	love.graphics.print("State: "..states_info[easing_state], 10, 32)
 
 	love.graphics.setColor(0.2, 0.2, 0.8, 1)
-	love.graphics.circle("fill", love.graphics.getWidth()/2, love.graphics.getHeight()/2, 100 * states[ease_state](times), 30)
+	love.graphics.circle("fill", love.graphics.getWidth()/2, love.graphics.getHeight()/2, 100 * states[easing_state](times), 30)
 
 end
