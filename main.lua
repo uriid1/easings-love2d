@@ -95,11 +95,15 @@ end
 function love.update()
 	times = times + step*dir
 
+	--[[
 	if times >= 1 then
 		dir = -1
 	elseif times <= 0 then
 		dir = 1
 	end
+	]]
+
+	times = math.max(0, math.min(1, times))
 end
 
 
@@ -108,6 +112,10 @@ function love.keypressed(key, scancode, isrepeat)
    		ease_state = ease_state - 1
    elseif key == "right" then
 		ease_state = ease_state + 1
+   end
+
+   if key == "space" then
+   		dir = dir * -1
    end
 end
 
