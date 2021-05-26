@@ -1,6 +1,7 @@
+
 function love.load()
 
-	require "easing"
+	local easing = require("easing")
 	
 	times = 0
 	step = 0.01
